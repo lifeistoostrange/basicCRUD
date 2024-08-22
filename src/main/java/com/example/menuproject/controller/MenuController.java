@@ -34,6 +34,12 @@ public class MenuController {
         return menuService.getMenusWithNonNullMother();
     }
 
+    @GetMapping("/child/{menuMotherId}")
+    public List<Menu> getAllMenuChildrenByMenuMotherId(@PathVariable Integer menuMotherId) {
+        System.out.println("Getmapping initiated");
+        return menuService.findMenuByMotherId(menuMotherId);
+    }
+
     @PutMapping("/put")
     public Menu putMenu(Menu menu) {
         System.out.println("Put Menu initiated");

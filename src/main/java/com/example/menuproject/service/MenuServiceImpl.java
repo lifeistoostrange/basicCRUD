@@ -34,4 +34,16 @@ public class MenuServiceImpl implements MenuService {
         return menuRepository.findByMenuMotherIsNotNull();
     }
 
+    public List<Menu> findMenuByMother(Menu mother) {
+        return List.of();
+    }
+
+    public List<Menu> findMenuByMotherId(Integer motherId) {
+        return menuRepository.findByMenuMotherId(motherId);
+    }
+
+    public List<Menu> findByMenuMother(Menu menu) {
+        return menuRepository.findByMenuMother(menu);
+    }
+
 }

@@ -24,13 +24,16 @@ public class Menu {
     @Column(nullable = false, name = "menu_name")
     String menuName;
 
-    @Column(name = "menu_desc")
+    @Column(name = "menu_desc", length = 50)
     String menuDesc;
 
-    @Column(name = "menu_order", unique = true)
+    @Column(name = "menu_order", unique = true, length = 10)
     Integer menuOrder;
 
-    @Column(name = "menu_mother")
+    @Column(name = "menu_mother", length = 20)
     String menuMother;
+
+    @Column(name = "menu_mother_id", length = 10)
+    Integer menuMotherId;
 
 }
