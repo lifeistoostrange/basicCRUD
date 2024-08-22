@@ -13,7 +13,5 @@ public interface MenuService {
 
     List<Menu> getMenusWithNonNullMother ();
 
-    List<Menu> findMenuByMother(Menu mother);
-
     List<Menu> findMenuByMotherId(Integer motherId);
 }
